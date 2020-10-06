@@ -6,5 +6,5 @@ package ejerciciomoriajava;
  * @author Andrés
  */
 public enum TipoSala {
-    MAGICA,HABILIDAD
+    MAGICA,HABILIDAD,ACCION
 }

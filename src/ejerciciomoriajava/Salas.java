@@ -11,7 +11,12 @@ public class Salas {
     public static int contador=0;
     private TipoSala tiposala;
 
+    public Salas(int poderMaligno) {
+        this.poderMaligno = poderMaligno;
+    }
 
+    
+    
     public int getPoderMaligno() {
         return poderMaligno;
     }
@@ -53,10 +58,10 @@ public class Salas {
         }
         //Si el poder es igual, se gana el 60% por ciento
         if (poderVara==sala.getPoderMaligno()) {
-            porcentaje=Math.floor(Math.random()*(1-100)*100);
+            porcentaje=Math.floor(Math.random()*101);
             aux=(int) porcentaje;
             if (aux<=60) {//Si se ha conseguido un 60%, hay un 80% de escapar
-                porcentaje=Math.floor(Math.random()*(1-100)*100);
+                porcentaje=Math.floor(Math.random()*101);
                 aux=(int) porcentaje;
                 if (aux<=80) {
                     return false;
@@ -68,10 +73,10 @@ public class Salas {
         }
         //Si el poder es menor, se gana el 30%
         if (poderVara<sala.getPoderMaligno()) {
-            porcentaje=Math.floor(Math.random()*(1-100)*100);
+            porcentaje=Math.floor(Math.random()*101);
             aux=(int) porcentaje;
             if (aux<=30) {//Si se ha conseguido un 30%, hay un 80% de escapar
-                porcentaje=Math.floor(Math.random()*(1-100)*100);
+                porcentaje=Math.floor(Math.random()*101);
                 aux=(int) porcentaje;
                 if (aux<=80) {
                     return false;
@@ -95,33 +100,32 @@ public class Salas {
         double porcentaje;
         int aux;
         
-        porcentaje=Math.floor(Math.random()*(1-100)*100);
+        porcentaje=Math.floor(Math.random()*101);
         aux=(int) porcentaje;
-        if (aux<=50) {//Si se queda sin flechas, hay un 80% de escapar
+        if (aux<=50) {
             hobbit.ponerseAnillo();
-            porcentaje=Math.floor(Math.random()*(1-100)*100);
+            porcentaje=Math.floor(Math.random()*101);
             aux=(int) porcentaje;
             if (aux<=90) {
-                return false;
+                return true;
             }
             else{
-                return true;
+                return false;
             }
         }
         else{
-            porcentaje=Math.floor(Math.random()*(1-100)*100);
+            porcentaje=Math.floor(Math.random()*101);
             aux=(int) porcentaje;
             if (aux<=20) {
-               if (aux<=80) {
-                return false;
+               return true;
+            }
+            
+            if (aux<=80) {
+                return true;
                 }
                 else{
-                    return true;
+                    return false;
                 }
-            }
-            else{
-                return true;
-            }
         }
         
     }

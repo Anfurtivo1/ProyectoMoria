@@ -5,10 +5,8 @@ package ejerciciomoriajava;
  *
  * @author Andrés
  */
-public class Hobbit {
+public class Hobbit extends Personajes{
     private boolean anillo;
-    
-    
     
     public void ponerseAnillo(){
         this.anillo=true;

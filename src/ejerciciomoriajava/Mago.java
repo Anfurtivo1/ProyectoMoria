@@ -5,15 +5,15 @@ package ejerciciomoriajava;
  *
  * @author Andrés
  */
-public class Mago {
+public class Mago extends Personajes{
     private int poderVara=30;
 
     public int PoderVara() {
         return poderVara;
     }
 
-    public void recargarVara(int poderVara) {
-        this.poderVara = poderVara;
+    public void recargarVara(int sumarPoder) {
+        this.poderVara = sumarPoder;
     }
     
     
